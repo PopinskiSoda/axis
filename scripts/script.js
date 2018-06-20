@@ -94,13 +94,15 @@ $(function() {
 
     function listener() {
         $(document)
-            .on('change', '.js-a-input', handleAInputChange.bind($('.js-a-input'), a, $('.js-a')))
-            .on('change', '.js-b-input', handleBInputChange.bind($('.js-b-input'), b, $('.js-b')))
+            .on('change', '.js-a-input', handleAInputChange.bind($('.js-a-input'), a, $('.js-a, .js-a-input')))
+            .on('change', '.js-b-input', handleBInputChange.bind($('.js-b-input'), b, $('.js-b, .js-b-input')))
             .on('change', '.js-answer-input', handleInputChange.bind($('.js-answer-input'), sumAB, $('.js-answer-input')))
     }
 
     function init() {
         var arrowA;
+
+        $('input').numeric();
 
         draw = SVG('drawing').size(WIDTH, HEIGHT),
         $a = $('.js-a'),

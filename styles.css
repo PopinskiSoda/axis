@@ -35,10 +35,6 @@
     top: -2px;
 }
 
-.equation-answer.invalid {
-    color: #ee192a;
-}
-
 .equation-answer[disabled] {
     position: initial;
     text-align: left;
@@ -49,6 +45,10 @@ input[disabled]{
     color: initial;
     background-color: initial;
     border: none;
+}
+
+input.invalid {
+    color: #ee192a;
 }
 
 .drawing {
